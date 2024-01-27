@@ -283,7 +283,6 @@ body {
 
 .chart-bar {
     position: relative;
-    width: 20px;
     background-color: var(--bar-color);
     transition: all 0.4s;
     width: 6%;
