@@ -307,7 +307,7 @@ body {
 
 .chart-bar {
   animation-name: transformHeight;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
 }
 
@@ -503,8 +503,28 @@ body {
   }
 
   .platform:hover {
-    background-color: var(--bg-transparent-color);
-    padding: 10px 50px;
+    /* background-color: var(--bg-transparent-color); */
+    padding: 10px 2rem;
+  }
+
+  .platform:hover > .green {
+    box-shadow: var(--green-progress-glow), var(--green-progress-glow), var(--green-progress-glow), var(--green-progress-glow);
+  }
+
+  .platform:hover > .red {
+    box-shadow: var(--red-progress-glow), var(--red-progress-glow), var(--red-progress-glow), var(--red-progress-glow);
+  }
+
+  .platform:hover > .purple {
+    box-shadow: var(--purple-progress-glow), var(--purple-progress-glow), var(--purple-progress-glow), var(--purple-progress-glow);
+  }
+
+  .platform:hover > .yellow {
+    box-shadow: var(--yellow-progress-glow), var(--yellow-progress-glow), var(--yellow-progress-glow), var(--yellow-progress-glow);
+  }
+
+  .platform:hover > .blue {
+    box-shadow: var(--blue-progress-glow), var(--blue-progress-glow), var(--blue-progress-glow), var(--blue-progress-glow);
   }
 
   @keyframes transformWidth {
@@ -518,14 +538,18 @@ body {
   
   .progress {
     transform: scaleY(0.72);
-    border-radius: 10px;
-    border: 0px !important;
+    border-radius: 5px;
+    border: none !important;
+    overflow-y: visible;
+    background-color: var(--progress-bg) !important;
+    border-color: white !important;
   }
 
   .progress-bar {
     animation: transformWidth 4s ease-in-out;
     transform-origin: left;
-    border-radius: 10px;
+    transform: scaleY(165%);
+    border-radius: 5px;
     border: none !important;
   }
 

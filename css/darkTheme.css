@@ -30,4 +30,10 @@
   --green-dropshadow: drop-shadow(5px 5px 15px var(--green-text));
   /* --card-hover-brightness: brightness(var(--card-color), 1.1) !important; */
   --card-hover-brightness: linear-gradient(rgba(52, 202, 165, 0.7), rgba(52, 202, 165, 0));
+  --progress-bg: #3f3f3f;
+  --green-progress-glow: 2px 2px 50px var(--green-text);
+  --purple-progress-glow: 2px 2px 50px rgb(206, 137, 255);
+  --yellow-progress-glow: 2px 2px 50px rgb(255, 255, 119);
+  --red-progress-glow: 2px 2px 50px rgb(255, 162, 162);
+  --blue-progress-glow: 2px 2px 50px rgb(106, 106, 255);
 }
