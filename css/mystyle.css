@@ -472,12 +472,14 @@ body {
 
   .progress {
     transform: scaleY(0.72);
-    border-radius: 40px;
+    border-radius: 10px;
     border: 0px !important;
   }
 
   .progress-bar {
-    border-radius: 40px;
+    border-radius: 10px;
+    border: none !important;
+    transform: translateX(-5%);
   }
 
 
