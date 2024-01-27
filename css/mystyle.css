@@ -126,8 +126,14 @@ body {
     min-width: 290px;
   }
 
+  .chartScrollableContent{
+    min-width: 480px;
+    width: 100%;
+  }
+
   .chartCard {
-    min-width: 380px;
+    padding-right: 0px !important;
+    width: 100%;
     overflow-x: auto;
     scrollbar-width: thin !important;
     scrollbar-color: #aab7cf transparent;
