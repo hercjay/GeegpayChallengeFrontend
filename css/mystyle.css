@@ -515,11 +515,7 @@ body {
       transform: scaleX(100%);
     }
   }
-
-  .animate-progress-bar {
-    animation: transformWidth 2s ease-in-out;
-  }
-
+  
   .progress {
     transform: scaleY(0.72);
     border-radius: 10px;
@@ -527,7 +523,7 @@ body {
   }
 
   .progress-bar {
-    animation: transformWidth 2s ease-in-out;
+    animation: transformWidth 4s ease-in-out;
     transform-origin: left;
     border-radius: 10px;
     border: none !important;
