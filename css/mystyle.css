@@ -508,23 +508,23 @@ body {
   }
 
   .platform:hover > .green {
-    box-shadow: var(--green-progress-glow), var(--green-progress-glow), var(--green-progress-glow), var(--green-progress-glow);
+    box-shadow: var(--green-progress-glow), var(--green-progress-glow);
   }
 
   .platform:hover > .red {
-    box-shadow: var(--red-progress-glow), var(--red-progress-glow), var(--red-progress-glow), var(--red-progress-glow);
+    box-shadow: var(--red-progress-glow), var(--red-progress-glow);
   }
 
   .platform:hover > .purple {
-    box-shadow: var(--purple-progress-glow), var(--purple-progress-glow), var(--purple-progress-glow), var(--purple-progress-glow);
+    box-shadow: var(--purple-progress-glow), var(--purple-progress-glow);
   }
 
   .platform:hover > .yellow {
-    box-shadow: var(--yellow-progress-glow), var(--yellow-progress-glow), var(--yellow-progress-glow), var(--yellow-progress-glow);
+    box-shadow: var(--yellow-progress-glow), var(--yellow-progress-glow);
   }
 
   .platform:hover > .blue {
-    box-shadow: var(--blue-progress-glow), var(--blue-progress-glow), var(--blue-progress-glow), var(--blue-progress-glow);
+    box-shadow: var(--blue-progress-glow), var(--blue-progress-glow);
   }
 
   @keyframes transformWidth {
