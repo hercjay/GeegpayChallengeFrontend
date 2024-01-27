@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Michael Anokwulu - Geegpay Challenge Frontend | @hercjay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/mystyle.css">
+    <link rel="stylesheet" href="css/lightTheme.css" id="theme-stylesheet">
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    
+</head>
+<body>
+
+    <header id="header" class="bg-color header fixed-top d-flex align-items-center justify-content-between">
+
+        <div class="d-flex align-items-center justify-content-between">
+            <img id="toggle-sidebar-btn" src="images/menu/menu-green.svg" alt="#">
+            <div id="currentPageTitle" class="currentPageTitle" >Dashboard</div>
+        </div>
+
+        <div class="right-navbar d-flex align-items-center mr-2">
+            <div class="search-bar d-none d-lg-flex">
+                <form class="search-form d-flex align-items-center" method="POST" action="" >
+                    <button type="submit" title="Search" class="text-color" style="transform: translateX(200%);"><i class="bi bi-search text-color"></i></button>
+                    <input style="padding-left: 40px" type="text" name="q" placeholder="Search..." title="Enter search query...">
+                </form>
+            </div>
+        
+            <div class="date-bar align-items-center px-2 d-none d-lg-flex">
+                <img id="theme-svg1" class="theme-svg" src="images/menu/calender.svg" alt="">
+                <div class="px-2 text-color p-14-22">
+                    <script>
+                        var today = new Date();
+                        document.write(today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }));
+                    </script>
+                </div>
+            </div>
+
+            <div class="topHeaderToggle px-2 d-block align-items-center" id="topHeaderToggle">
+                <i class="bi  bi-search h6" id="searchIcon"></i>
+                <i class="bi bi-x h2 d-none" id="xIcon"></i>
+            </div>
+        
+            <div class="bell-bar px-2" onclick="alert('Notifications button pressed!')">
+                <img id="theme-svg3" class="theme-icon" src="images/menu/bell-circle.svg" alt="">
+            </div>
+        
+            <div style="cursor: pointer" class="user-bar d-flex align-items-center px-2 nav-item dropdown d-lg-b-none" href="#" data-bs-toggle="dropdown">
+                <img id="toggle-sidebar-btn" src="images/menu/avatar-circle.png" alt="">
+                <div class="px-2 d-none d-lg-block" >
+                    <div class="user-name text-color ellipsis-text p-16">Michael Ejike Anokwulu @hercjay</div>
+                    <div class="user-email text-color-3 ellipsis-text p-14-22">iamhercjay@gmail.com</div>
+                </div>
+                <div class="px-2 d-none d-lg-flex">
+                    <img id="theme-svg5" class="theme-svg" src="images/menu/arrow-down.svg" alt="" >
+                </div>
+        
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile bg-color">
+                    <li class="dropdown-header bg-color">
+                        <h6 class="text-color ellipsis-text2">Michael Anokwulu @hercjay</h6>
+                        <span class="text-color-3 py-4">
+                            iamhercjay@gmail.com 
+                        </span>
+                        <br> <br> <a  href="https://github.com/hercjay" target="_blank">Visit Github</a>
+                        <br> <br> <a href="https://twitter.com/hercjay" target="_blank">Visit Twitter</a>
+                        <br> <br> <a href="https://linkedin.com/in/michael-anokwulu" target="_blank">Visit Linkedin</a>
+                    </li>
+
+                    <div class="date-bar-inside d-flex align-items-center justify-content-center py-2 col-12 d-flex">
+                        <img id="theme-svg2" class="theme-svg" src="images/menu/calender.svg" alt="">
+                        <div class="px-2 text-color p-14-22">
+                            <script>
+                                var today = new Date();
+                                document.write(today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }));
+                            </script>
+                        </div>
+                    </div>
+
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+            
+                    <li>
+                        <a class="dropdown-item dropdown-signout d-flex align-items-center" href="#">
+                        <i class="bi bi-box-arrow-left mr-2"></i>
+                        <span class="text-color">Sign Out</span>
+                        </a>
+                    </li>
+            </div>
+        </div>
+
+    </header>
+
+
+    <!-- SIDEBAR  -->
+  <aside id="sidebar" class="sidebar mb-0 mr-0 bg-color">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+        <div>
+            <li title="Dashboard" id="Dashboard" class="nav-item sidebar-nav-item active-sidebar-nav-item">
+                <img id="category-icon" src="images/menu/category.svg" alt="">
+            </li>
+    
+            <li title="Leaderboard" id="Leaderboard" class="nav-item sidebar-nav-item">
+                <img src="images/menu/trend-up.svg" alt="">
+            </li>
+    
+            <li title="Users" id="Users" class="nav-item sidebar-nav-item">
+                <img src="images/menu/profile-2user.svg" alt="">
+            </li>
+    
+            <li title="Inventory" id="Inventory" class="nav-item sidebar-nav-item">
+                <img src="images/menu/box.svg" alt="">
+            </li>
+    
+            <li title="Discounts" id="Discounts" class="nav-item sidebar-nav-item">
+                <img src="images/menu/discount-shape.svg" alt="">
+            </li>
+    
+            <li title="Info" id="Info" class="nav-item sidebar-nav-item">
+                <img src="images/menu/info-circle.svg" alt="">
+            </li>
+    
+            <li title="Toggle DarkMode" class="nav-item themeToggleLi">
+                <img id="themeToggle" src="images/menu/theme2-dark.png" alt="" style="height: 92px; width: 46px; padding: 0px; margin: 4px;">
+            </li>
+        </div>
+
+        <div>
+            <li title="Signup" id="Signup" class="nav-item sidebar-nav-item">
+                <img src="images/menu/arrow-right.svg" alt="">
+            </li>
+    
+            <li title="Settings" id="Settings" class="nav-item sidebar-nav-item">
+                <img src="images/menu/setting-2.svg" alt="">
+            </li>
+    
+            <li title="Logout" id="Logout"  class="nav-item sidebar-nav-item">
+                <img src="images/menu/logout.svg" alt="" style="margin-bottom: 0px;">
+            </li>
+        </div>
+
+    </ul>
+
+  </aside>
+
+
+  <main id="main" class="main bg-color">
+
+    <!-- COLLAPSIBLE SEARCH WIDGET -->
+    <div id="topHeader" class="bg-color topHeader d-none row header  align-items-center justify-content-center text-center">
+        <div class="search-bar-top col-8 justify-content-center align-items-center">
+            <form class="search-form d-flex align-items-center" method="POST" action="#">
+                <input type="text" name="q" placeholder="Search..." title="Enter search query...">
+                <button type="submit" title="Search"><i class="bi bi-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- TOP ROW -->
+    <div class="row px-4">
+        <!-- BAR CHART SECTION -->
+        <div class="col-lg-7 col-12  p-0">
+            <div class="myCard barChartFullCard ">
+                <!-- TITLE OF THE BAR CHART WIDGET -->
+                <div class="d-flex justify-content-between">
+                    <div class="title">Sales Trends</div>
+                    <div class="right d-flex text-center align-items-center">
+                        <div class="text-color mx-2 subtitle">Sort by: </div>
+                        
+                        <div style="cursor: pointer" class="user-bar d-flex align-items-center px-2 py-1 nav-item dropdown d-lg-b-none user-bar-2" href="#" data-bs-toggle="dropdown">
+                            <div class="px-2" >
+                                <div class="user-name text-color ellipsis-text p-12-16">Weekly</div>
+                            </div>
+                            <div class="px-2 d-lg-flex">
+                                <img id="theme-svg4" class="theme-svg"  src="images/menu/arrow-down.svg" alt="">
+                            </div>
+                    
+                            <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile bg-color">
+                                <li class="dropdown-header bg-color">
+                                    <span class="text-color-3">
+                                        Daily
+                                    </span>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="dropdown-header bg-color">
+                                    <span class="text-color-3">
+                                        Weekly
+                                    </span>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="dropdown-header bg-color">
+                                    <span class="text-color-3">
+                                        Monthly
+                                    </span>
+                                </li>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BAR CHART WIDGET -->
+                <div class="row chartCard ">
+                    <div class="col-md-12 py-3 m-0 p-0" style="height: 374px;">
+                        <div class="bar-chart p-0 ">
+
+                            <div class="chart-axis-y p-0 m-0">
+                                <p class="chart-axis-label">50.000</p>
+                                <p class="chart-axis-label">40.000</p>
+                                <p class="chart-axis-label">30.000</p>
+                                <p class="chart-axis-label">20.000</p>
+                                <p class="chart-axis-label">10.000</p>
+                                <p class="chart-axis-label">5.000</p>
+                                <p class="chart-axis-label">0</p>
+                            </div>
+                            
+                            <div class="chart-bar-row">
+                                <div class="chart-bar" style="height: 19.33%; "><img  src="images/prompt-light.png"><p>$4.123</p></img></div>
+                                <div class="chart-bar" style="height: 40%; "><img  src="images/prompt-light.png"><p>$13.000</p></img></div>
+                                <div class="chart-bar" style="height: 12.89%; "><img  src="images/prompt-light.png"><p>$2.589</p></img></div>
+                                <div class="chart-bar" style="height: 62.22%; "><img  src="images/prompt-light.png"><p>$27.222</p></img></div>
+                                <div class="chart-bar" style="height: 20%; "><img  src="images/prompt-light.png"><p>$4.900</p></img></div>
+                                <div class="chart-bar" style="height: 87%; "><img  src="images/prompt-light.png"><p>$45.000</p></img></div>
+                                <div class="chart-bar" style="height: 21.78%; "><img  src="images/prompt-light.png"><p>$4.978</p></img></div>
+                                <div class="chart-bar" style="height: 40%; "><img  src="images/prompt-light.png"><p>$12.000</p></img></div>
+                                <div class="chart-bar" style="height: 71.11%; "><img  src="images/prompt-light.png"><p>$32.511</p></img></div>
+                                <div class="chart-bar" style="height: 10%; "><img  src="images/prompt-light.png"><p>$1.200</p></img></div>
+                                <div class="chart-bar" style="height: 66.67%; "><img  src="images/prompt-light.png"><p>$30.667</p></img></div>
+                                <div class="chart-bar" style="height: 55.56%; "><img  src="images/prompt-light.png"><p>$20.556</p></img></div>
+                            </div>
+                            
+                            <div class="chart-grid-row">
+                                <div class="chart-grid-line"></div>
+                                <div class="chart-grid-line"></div>
+                                <div class="chart-grid-line"></div>
+                                <div class="chart-grid-line"></div>
+                                <div class="chart-grid-line"></div>
+                                <div class="chart-grid-line"></div>
+                                <div class="chart-grid-line"></div>
+                                <div class="chart-grid-line"></div>
+                                <div class="chart-grid-line"></div>
+                                <div class="chart-grid-line"></div>
+                            </div>
+
+                            <div class="chart-axis-x">
+                                <p class="chart-axis-x-label">Jan</p>
+                                <p class="chart-axis-x-label">Feb</p>
+                                <p class="chart-axis-x-label">Mar</p>
+                                <p class="chart-axis-x-label">Apr</p>
+                                <p class="chart-axis-x-label">May</p>
+                                <p class="chart-axis-x-label">Jun</p>
+                                <p class="chart-axis-x-label">Jul</p>
+                                <p class="chart-axis-x-label">Aug</p>
+                                <p class="chart-axis-x-label">Sep</p>
+                                <p class="chart-axis-x-label">Oct</p>
+                                <p class="chart-axis-x-label">Nov</p>
+                                <p class="chart-axis-x-label">Dec</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+        <!-- BAR CHART SECTION ENDS-->
+        
+        <!-- FOUR SQUARES BIZ HIGHLIGHTS -->
+        <div class="col-lg-5 col-12  p-0 m-0 row ">
+
+            <div class="col-md-6 box box1"  >
+                <div class="myCard fourCard ">
+                    <div class="d-flex justify-content-between ">
+                        <img class="greenGlow" src=" images/order/order-icon.svg" alt="">
+                        <img class="p-2 greenGlow" src="images/order/order-curve.svg" alt="">
+                    </div>
+                    <div class="p-18-26-600">Total Order</div>
+                    <div class="p-24-32 purecounter" 
+                        data-purecounter-start="330"
+                        data-purecounter-end="350">
+                        350
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="box-highlight">
+                            <img class="pr-2 greenGlow" src="images/order/trending-up.svg" alt="">23.5%
+                        </div>
+                        <div class="p-14-16 px-2">
+                            vs. previous month
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-6   box box2" >
+                <div class="myCard fourCard">
+                    <div class="d-flex justify-content-between">
+                        <img class="greenGlow" src="images/other-boxes/refund.svg" alt="">
+                        <img class="p-2 redGlow" src="images/other-boxes/curves-red.svg" alt="">
+                    </div>
+                    <div class="p-18-26-600">Total Refund</div>
+                    <div class="p-24-32 purecounter" 
+                        data-purecounter-start="230"
+                        data-purecounter-duration="3"
+                        data-purecounter-end="270">
+                        270
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="box-highlight">
+                            <img class="pr-2 redGlow" src="images/other-boxes/trending-down-red.svg" alt="">23.5%
+                        </div>
+                        <div class="p-14-16 px-2">
+                            vs. previous month
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6  box box3" >
+                <div class="myCard fourCard">
+                    <div class="d-flex justify-content-between">
+                        <img class="greenGlow" src="images/other-boxes/average-sales.svg" alt="">
+                        <img class="p-2 redGlow" src="images/other-boxes/curves-red.svg" alt="">
+                    </div>
+                    <div class="p-18-26-600">Average Sales</div>
+                    <div class="p-24-32 purecounter" 
+                        data-purecounter-start="1527"
+                        data-purecounter-duration="3"
+                        data-purecounter-end="1567">
+                        1567
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="box-highlight">
+                            <img class="pr-2 redGlow" src="images/other-boxes/trending-down-red.svg" alt="">23.5%
+                        </div>
+                        <div class="p-14-16 px-2 px-2">
+                            vs. previous month
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-6 box box4">
+                <div class="myCard fourCard">
+                    <div class="d-flex justify-content-between">
+                        <img class="greenGlow" src="images/other-boxes/total-income.svg" alt="">
+                        <img class="p-2 greenGlow" src="images/order/order-curve.svg" alt="">
+                    </div>
+                    <div class="p-18-26-600">Total Income</div>
+                    <div class="p-24-32">$<span class="purecounter" 
+                            data-purecounter-start="224"
+                            data-purecounter-duration="4"
+                            data-purecounter-end="350">350
+                        </span>.000
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <div class="box-highlight">
+                            <img class="pr-2 greenGlow" src="images/order/trending-up.svg" alt="">23.5%
+                        </div>
+                        <div class="p-14-16 px-2">
+                            vs. previous month
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+    <!-- TOP ROW ENDS -->
+
+
+
+        <!-- BOTTOM ROW STARTS -->
+        <div class="row px-4 py-3">
+
+            <!-- TABLE SECTION -->
+            <div class="col-lg-7 col-12  p-0 card-pad-right">
+                <div class="myCard chartCard">
+                    <!-- TITLE OF THE TABLE WIDGET -->
+                    <div class="d-flex justify-content-between">
+                        <div class="title">Last Orders</div>
+                        <div class="right d-flex text-center align-items-center">
+                            <div class="green-text mx-2  p-18-26" style="cursor: pointer" onclick="alert('See All Orders button clicked!')">
+                                See All
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- TABLE WIDGET -->
+                    <div class="row">
+                        <div class="col-md-12 py-3 m-0 p-2">
+
+                            <table class="table-chart w-auto">
+                                <thead>
+                                    <tr id="th-tr">
+                                        <th class="th-lg">Name</th>
+                                        <th class="th-md">Date</th>
+                                        <th class="th-md">Amount</th>
+                                        <th>Status</th>
+                                        <th>Invoice</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-chart-tbody">
+
+                                    <tr>
+                                        <td style="min-width: fit-content; white-space: nowrap;" class="p-16-24-500 pr-4"><img  class="pr-2" src="images/table/Frame 1000003208.svg" alt="">
+                                                Marcus Bergson
+                                            </td>
+                                        <td style="min-width: 135px;" class="p-16-24-400">Nov 15, 2023</td>
+                                        <td style="min-width: 100px;" class="p-16-24-500">$80,000</td>
+                                        <td style="min-width: 100px;" class="green-text p-16-24-400">Paid</td>
+                                        <td class="p-14-22-400 pointer " style="min-width: 105px;"><img class="view-icon px-2" src="images/table/view-icon.svg" alt="">View</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="p-16-24-500"><img class="pr-2" src="images/table/Frame 1000003208 (1).svg" alt="">
+                                                Jaydon Vaccaro
+                                            </td>
+                                        <td class="p-16-24-400">Nov 15, 2023</td>
+                                        <td class="p-16-24-500">$150,000</td>
+                                        <td class="red-text p-16-24-400">Refund</td>
+                                        <td class="p-14-22-400 pointer"><img class="px-2 view-icon " src="images/table/view-icon.svg" alt="">View</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="p-16-24-500"><img class="pr-2" src="images/table/Frame 1000003208 (2).svg" alt="">
+                                                Correy Schleifer
+                                            </td>
+                                        <td class="p-16-24-400">Nov 14, 2023</td>
+                                        <td class="p-16-24-500">$87,000</td>
+                                        <td class="green-text p-16-24-400">Paid</td>
+                                        <td class="p-14-22-400 pointer"><img class="px-2 view-icon " src="images/table/view-icon.svg" alt="">View</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="p-16-24-500"><img class="pr-2" src="images/table/Frame 1000003208 (3).svg" alt="">
+                                                Cooper Press
+                                            </td>
+                                        <td class="p-16-24-400">Nov 14, 2023</td>
+                                        <td class="p-16-24-500">$100,000</td>
+                                        <td class="red-text p-16-24-400">Refund</td>
+                                        <td class="p-14-22-400 pointer"><img class="px-2 view-icon " src="images/table/view-icon.svg" alt="">View</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="p-16-24-500"><img class="pr-2" src="images/table/Frame 1000003208 (4).svg" alt="">
+                                                Phillip Lubin
+                                            </td>
+                                        <td class="p-16-24-400">Nov 13, 2023</td>
+                                        <td class="p-16-24-500">$78,000</td>
+                                        <td class="green-text p-16-24-400">Paid</td>
+                                        <td class="p-14-22-400 pointer"><img class="px-2 view-icon " src="images/table/view-icon.svg" alt="">View</td>
+                                    </tr>
+                                    
+
+                                </tbody>
+                            </table>
+    
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+            <!-- TABLE SECTION ENDS-->
+            
+            <!-- TOP PLATFORMS STARTS -->
+            <div class="col-lg-5 col-12  p-0 m-0 row ">
+
+                <div class="box-platform">
+                    <div class="myCard">
+
+                        <div class="d-flex justify-content-between">
+                            <div class="title">Top Platforms</div>
+                            <div class="right d-flex text-center align-items-center">
+                                <div class="green-text mx-2  p-18-26" style="cursor: pointer" onclick="alert('See All Orders button clicked!')">
+                                    See All
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="platforms-container pt-3">
+                                <div class="platform">
+                                    <div class="title">Book Bazaar</div>
+                                    <div class="progress my-3">
+                                        <div class="progress-bar bg-purple" role="progressbar" style="width: 52%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="p-18-26-400"> $2,500,000</div>
+                                        <div class="p-18-26-400"> +5%</div>
+                                    </div>
+                                </div>
+
+                                <div class="platform">
+                                    <div class="title">Artisan Aisle</div>
+                                    <div class="progress my-3">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 35%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="p-18-26-400"> $1,800,000</div>
+                                        <div class="p-18-26-400"> +10%</div>
+                                    </div>
+                                </div>
+
+                                <div class="platform">
+                                    <div class="title">Toy Troop</div>
+                                    <div class="progress my-3">
+                                        <div class="progress-bar bg-warning " role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="p-18-26-400"> $1,200,000</div>
+                                        <div class="p-18-26-400"> +8%</div>
+                                    </div>
+                                </div>
+
+                                <div class="platform">
+                                    <div class="title">XStore</div>
+                                    <div class="progress my-3">
+                                        <div class="progress-bar bg-danger " role="progressbar" style="width: 15%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="p-18-26-400"> $500,000</div>
+                                        <div class="p-18-26-400"> +2%</div>
+                                    </div>
+                                </div>
+
+                                <div class="platform">
+                                    <div class="title">Book Bazaar</div>
+                                    <div class="progress my-3">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 23%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="p-18-26-400"> $2,500,000</div>
+                                        <div class="p-18-26-400"> +5%</div>
+                                    </div>
+                                </div>
+
+                                <div class="platform">
+                                    <div class="title">Artisan Aisle</div>
+                                    <div class="progress my-3">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="p-18-26-400"> $1,800,000</div>
+                                        <div class="p-18-26-400"> +10%</div>
+                                    </div>
+                                </div>
+
+                                <div class="platform">
+                                    <div class="title">Toy Troop</div>
+                                    <div class="progress my-3">
+                                        <div class="progress-bar bg-warning " role="progressbar" style="width: 55%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="p-18-26-400"> $1,200,000</div>
+                                        <div class="p-18-26-400"> +8%</div>
+                                    </div>
+                                </div>
+
+                                <div class="platform">
+                                    <div class="title">XStore</div>
+                                    <div class="progress my-3">
+                                        <div class="progress-bar bg-danger " role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="p-18-26-400"> $500,000</div>
+                                        <div class="p-18-26-400"> +2%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                    
+
+            </div>
+                
+        </div>
+        <!-- BOTTOM ROW ENDS -->
+
+
+
+  </main>
+
+
+
+
+
+
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="assets/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/myscript.js"></script>
+    <script src="js/themeToggle.js"></script>
+
+    <script>
+        new PureCounter();
+    </script>
+
+</body>
+</html>

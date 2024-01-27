@@ -1,0 +1,32 @@
+
+
+:root {
+    --prompt-color: white;
+    --text-color: #26282C;
+    --text-color-2: #3A3F51;
+    --text-color-3: #898989;
+    --chart-label: #555555bd;
+    --bg-color: #FAFAFA;
+    --bg-color2: white;
+    --page-title-color: #26282C;
+    --border-color: #E5E5E5;
+    --active-color: #0D062D;
+    --active-image: url(../images/menu/active-image.svg);
+    --prompt-image: url(../images/prompt-light.png);
+    --bg-transparent-color: rgba(1, 41, 112, 0.05);
+    --bg-input: white;
+    --placeholder-color: #898989;
+    --card-color: white;
+    --bar-color: rgba(52, 202, 165, 0.1);
+    --shadow-color: rgba(1, 41, 112, 0.25);
+    --makeSvgWhite: none;
+    --filterPromptImg: none;
+    --shadow-spread: 20px;
+    --bar-shadow: none;
+    --red-dropshadow: none;
+    --green-dropshadow: none;
+    --card-hover-brightness: '';
+
+  }
+
+  

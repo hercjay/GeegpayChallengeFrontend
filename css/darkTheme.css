@@ -1,0 +1,30 @@
+
+
+:root {
+  --prompt-color: white;
+  --text-color: #ffffff;
+  --text-color-2: #FAFAFA;
+  --text-color-3: #d8d8d8;
+  --chart-label: #b3b3b3bd;
+  --bg-color: #0D062D;
+  --bg-color2: rgba(1, 41, 112, 0.2);
+  --page-title-color: #ffffff;
+  --border-color: rgba(248, 248, 248, 0.2);
+  --active-color: #382d69;
+  --active-image: url(../images/menu/active-image-dark.png);
+  --prompt-image: url(../images/prompt-dark2.png);
+  --bg-transparent-color: rgba(255, 255, 255, 0.1);
+  --bg-input: rgba(187, 187, 187, 0.233);
+  --placeholder-color: #dadada;
+  --card-color: rgba(1, 41, 112, 0.4);
+  --bar-color: rgba(52, 202, 165, 0.3);
+  --shadow-color: rgba(0, 255, 191, 0.514);
+  --makeSvgWhite: invert(100%);
+  --filterPromptImg: invert(20%);
+  --shadow-spread: 50px;
+  --bar-shadow: 0px 0px 50px var(--green-text);
+  --red-dropshadow: drop-shadow(5px 5px 15px var(--red-text));
+  --green-dropshadow: drop-shadow(5px 5px 15px var(--green-text));
+  /* --card-hover-brightness: brightness(var(--card-color), 1.1) !important; */
+  --card-hover-brightness: linear-gradient(rgba(52, 202, 165, 0.7), rgba(52, 202, 165, 0));
+}
