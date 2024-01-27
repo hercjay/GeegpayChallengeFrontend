@@ -1,4 +1,3 @@
-
 const themeStylesheet = document.getElementById('theme-stylesheet');
 const categoryIcon = document.getElementById('category-icon');
 const themeToggle = document.getElementById('themeToggle');
@@ -77,8 +76,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-
-
 
 
