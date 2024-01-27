@@ -18,8 +18,8 @@
   --bg-transparent-color: rgba(255, 255, 255, 0.1);
   --bg-input: rgba(187, 187, 187, 0.233);
   --placeholder-color: #dadada;
-  --card-color: rgb(0, 0, 0);
-  /* --card-color: rgba(1, 94, 255, 0.4); */
+  --card-color: linear-gradient(to bottom, rgb(15, 15, 15) 20%, black 80%);
+  /* --card-color: rgba(1, 94, 255, 0.4); rgb(0, 0, 0);*/
   --bar-color: rgba(52, 202, 165, 0.3);
   --shadow-color: rgba(0, 255, 191, 0.514);
   --makeSvgWhite: invert(100%);

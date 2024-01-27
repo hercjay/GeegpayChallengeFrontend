@@ -59,5 +59,6 @@
         select('#currentPageTitle').innerHTML = this.attributes['id'].value;
       }, true)
     }
+    
   
   })()
